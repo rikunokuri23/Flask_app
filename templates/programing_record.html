@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+                <h1>プログラミング記録</h1>
+                <form action="/confirm" id="form2" method="post">
+                    <label for="name">言語</label>
+                    <select name="name">
+                        <option value="html">HTML,CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">python</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="c">C</option>
+                        <option value="c++">C++</option>
+                        <option value="c#">C#</option>
+                        <option value="java">Java</option>
+                        
+                    </select>
+                    <label for="article">内容</label>
+                    <input type="text" name="article">
+                    <button type="submit">記録</button>
+                </form>
+
+               
+                <div class="table_back">
+                <table class="table">
+                    <tr><th class="lang">言語</th><th class="content">内容</th></tr>
+                        {% for line in lines %}
+                            <tr>{% set column = line.split(",") %}
+                                {% for item in column %}
+                                    <td>{{ item }}</td>
+                                {% endfor %}</tr>
+                        {% endfor %}
+                </table>
+                </div>
+{% endblock %}

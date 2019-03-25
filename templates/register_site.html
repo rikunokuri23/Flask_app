@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+ <div class="learning_sites">
+    <form action="/site" method="post">
+        <label for="name">言語</label>
+                    <select name="name">
+                        <option value="html">HTML,CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">python</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="c">C</option>
+                        <option value="c++">C++</option>
+                        <option value="c#">C#</option>
+                        <option value="java">Java</option>
+                        
+                    </select>
+        <label for="site">学習サイト・教材</label>
+        <input name="site"　type="text">
+        <button type="submit">登録</button>
+    </form>
+     
+     <form action="/">
+            <button type="submit">戻る</button>
+     </form>
+                
+ </div>
+{% endblock %}

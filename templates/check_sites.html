@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h2>登録中の教材</h2>
+        <div class="table_back">
+                <table class="table">
+                    <tr><th class="lang">言語</th><th class="content">教材名</th></tr>
+                        {% for line in lines %}
+                            <tr>{% set column = line.split(",") %}
+                                {% for item in column %}
+                                    <td>{{ item }}</td>
+                                {% endfor %}</tr>
+                        {% endfor %}
+                </table>
+                </div>
+        <form action="/">
+            <button type="submit">戻る</button>
+        </form>
+
+{% endblock %}  

@@ -1,0 +1,104 @@
+
+.header{
+    padding-top:5px;
+    background-color:#2f4f4f;
+    height: 30px;
+    
+}
+.header p{
+    color:#ffffff;
+    opacity:0.7;
+    float:left;
+    margin:0px 20px;
+}
+.header_lang li{
+    list-style: none;
+    float: left;
+    padding: 0px 20px;
+    color:aliceblue;
+    opacity: 0.8;
+}
+
+.main{
+    text-align: center;
+    
+    background-color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.main h1{
+    font-weight: normal;
+    opacity: 0.9;
+    margin-top:0px;
+}
+
+form label{
+    padding-left:20px;
+
+}
+
+.past_data{
+    background-color:aquamarine;
+    color:aliceblue;
+    border-radius: 5px;
+    display:inline-block;
+    margin-bottom:8px;
+    padding:5px 10px;
+    box-shadow: 0px 5px #cccccc;
+}
+.past_data:hover{
+    background-color:#1bff4a;
+}
+
+.past_data:active{
+    box-shadow:none;
+    position:relative;
+    top:4px;
+    
+}
+
+.footer{
+    background-color: #2f4f4f;
+    text-align:center;
+}
+.footer p{
+    margin-top: 0px;
+    margin-bottom:0px;
+    
+}
+
+
+table {
+    display: table;
+    border:medium solid black;
+    background-color:#d7eeff;
+    border-collapse: collapse;
+    opacity:0.9;
+}
+
+table .lang{
+    width:150px;
+    
+}
+
+table .content{
+    width:500px;
+}
+
+table th, table td{
+    border:solid 1px black;
+}
+
+.table_back{
+    text-align:center;
+    display:inline-block;
+}
+
+.main h2{
+    margin-top:0px;
+    padding-top:10px;
+}
+
+.register_site{
+    margin:5px 20px;
+}

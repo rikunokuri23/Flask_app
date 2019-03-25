@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h2>{{ lang }}の学習記録</h2>
+        <div class="table_back">
+        <table>
+            <tr><th class="lang">言語</th><th class="content">内容</th></tr>
+                {% for line in lines%}
+                    <tr>
+                    {% set column = line.split(",") %}
+                    {% if lang == column[0] %}
+                        {% for item in column %}
+                            <td>{{ item }}</td>
+                        {% endfor %}
+                    {% endif %}
+                    </tr>    
+                {% endfor %}
+            
+        </table>
+        </div>
+        <form action="/">
+            <button type="submit">戻る</button>
+        </form>
+
+{% endblock %}  

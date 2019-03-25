@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charaset="utf-8">
+        <title>programing resister</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                 <p>学習中の言語</p>
+            <div class="header_lang">
+                <form action="/select" id="form" method="post">
+                    <select name="name">
+                        <option value="html">HTML,CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">python</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="c">C</option>
+                        <option value="c++">C++</option>
+                        <option value="c#">C#</option>
+                        <option value="java">Java</option>
+                        
+                    </select>
+                    <button type="submit">選択</button>
+
+                </form>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="cantainer">
+                <!-- <a class="past_data" href="/register_site">学習サイト・教材の登録</a><br> -->
+                <form action="/register_site">
+                    <button type="submit" class="register_site">学習サイト・教材の登録</button>
+                </form>
+                
+                <form action="/check_your_site">
+                    <button type="submit">登録した教材を見る</button>
+                </form>
+               
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
